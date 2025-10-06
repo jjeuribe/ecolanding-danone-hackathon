@@ -1,34 +1,33 @@
 # EcoLanding
+Eco Landing is a prototype designed to promote the range of eco-friendly and healthy products from the international brand Danone.
 
-Eco Landing es un prototipo para promocionar la gama de productos ecológicos y saludables de la marca internacional Danone.
-
-En esta landing page podemos navegar entre los diferentes productos, visualizar el detalle de cada uno y realizar búsquedas de los mismos. 
+On this demo users can navigate through the different products, view their details, and perform product searches. 
 
 ## Demo
 
 [https://eco-landing-turboaux.vercel.app](https://eco-landing-turboaux.vercel.app)
 
-## Instalación
+## Installation
 
-Este proyecto fue generado utilizando Angular CLI 15.2.9 y Node 18.16.0, asegurate de tenerlos instalados. 
+This project was generated using Angular CLI 15.2.9 and Node 18.16.0, so make sure you have them installed.
 
-Primero descarga el repositorio de este proyecto, puedes hacerlo a través de git: 
+First, download the project repository. You can do so via Git:
 
 `git clone https://github.com/turboaux/eco-landing.git`
 
-Una vez dentro de la carpeta raíz del proyecto, asegurate de instalar las dependencias del mismo: 
+Once inside the project’s root folder, make sure to install its dependencies:
 
 `npm install`
 
-En este punto podemos ejecutar el proyecto en modo de pruebas:
+At this point, you can run the project in development mode:
 
 `ng serve`
 
-y visitar el sitio a través de la url generada que comunmente es http://localhost:4200  
+Then visit the site through the generated URL, which is commonly: http://localhost:4200  
 
 ## Stack
 
-El *frontend* del proyecto fue implementado utilizando las siguientes herramientas y dependencias de desarrollo: 
+The **frontend** of this project was built using the following tools and development dependencies: 
 
 * Node js v18.16.0
 * Angular v15.2.9
@@ -39,22 +38,21 @@ El *frontend* del proyecto fue implementado utilizando las siguientes herramient
 * Contentful 10.2.4
 * Subskink 1.0.2
 
-Para el CSS del proyecto se utilizó SASS y un enfoque orientado a BEM para el nombre de las clases CSS.
-Por ahora el proyecto solo esta optimizado para pantallas Desktop y algunas Tablets.
+For the project’s CSS, SASS was used along with a BEM-oriented approach for naming CSS classes.
+Currently, the project is optimized only for desktop and some tablet screens.
 
-El backend del proyecto fue implementado utilizando el popular CMS Headless Contentful. 
+The **backend** of this project was implemented using the popular **CMS Headless Contentful**. 
 
-## Toma de decisiones
+## Decision Making
 
-1. Investigar que es un CMS Headless, cual es su filosofía, qué problema soluciona, y ver cuales son los más populares.
-2. Optamos por Contentful dado que es el recomendado para la actividad además de que posee un tier gratuito.
-3. Investigar cómo integrar Contentful con Angular, existe una dependencia que permite llevar a cabo toda la integración a través de una API escrita en Javascript [https://www.npmjs.com/package/contentful](https://www.npmjs.com/package/contentful)
-4. Análisis y levantamiento de requerimientos de Negocio, solventar cualquier duda con respecto a lo que se quiere lograr dado el tiempo límite señalado.
-5. Modelado de la información, se crearon 3 simples Modelos, cada uno con sus propias características intrínsecas:  
+1. Research what a headless CMS is, its philosophy, what problems it solves, and identify the most popular frameworks.
+2. I chose **Contentful** it was the recommended option for the activity and offers a free tier. 
+3. Research how to integrate **Contentful** with **Angular**. There's a dependency that enables full integration via a [Javascript API](https://www.npmjs.com/package/contentful). 
+4. Analyze and gather business requirements, clarifying any doubts regarding project goals within the given time frame for this challenge.
+5. Data Modeling, three simple models were created, each with its own intrinsic properties:
     - User
         - name
         - avatar
-    
     - Product
         - name
         - description
@@ -66,20 +64,16 @@ El backend del proyecto fue implementado utilizando el popular CMS Headless Cont
         - isEcoFriendly
         - ingredients
         - ecologicalFootprint
-
     - CalorieMetric
         - title
         - caloriesConsumed
         - caloriesThreshold
         - user 
-6. En este modelado de información existe una relación One to Many entre User y CalorieMetric, ya que un Usuario puede tener varias métricas de calorías asociadas.
-7. Configuración inicial del Proyecto y Repositorio.
-8. Instalación y configuración de Dependencias de Desarrollo.
-9. Dado el tiempo que se tiene, opte solamente por desarrollar los siguientes módulos feature:
-    - Módulo Home - Aquí se encuentra la página inicial del proyecto.
-    - Módulo Products - Aquí se encuentran las páginas del listado de productos y single de producto, además de todas las implementaciones que le dan vida: servicios, modelos, adaptadores, etc.
-    - Módulos de UI - Aquí se encuentran componentes que puedo reutilizar a través de toda la aplicación, cada componente UI se encuentra abstraído como un módulo propio.
 
-## Further help
-
-Cualquier duda mi correo es jje.uribe@gmail.com
+6. There's a **One-to-Many** relationship between **`User`** and **`CalorieMetric`**, since a user can have multiple calorie metrics associated. 
+7. Initial project configuration and repository setup. 
+8. Installation and configuration of development dependencies. 
+9. Given the limited time for this challenge, I chose to develop only the following **feature modules**: 
+    - **Home Module** – contains the project’s main page.
+    - **Products Module** – contains the product list and single product pages, as well as all the implementations that make them work: services, models, adapters, and so on.
+    - **UI Modules** – contains reusable UI components used throughout the application, each abstracted as its own module.
