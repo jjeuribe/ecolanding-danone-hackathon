@@ -1,0 +1,17 @@
+.product {
+    
+    &__featureImage {
+        background-position: center;
+        background-size: cover;
+        background-position: center;
+        min-height: 240px;
+        height: 20rem;
+        margin-bottom: .5rem;
+    }
+
+    &__name {
+        text-align: center;
+        color: var(--gray-900);
+        margin-bottom: 1.5rem;
+    }
+}
